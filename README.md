@@ -1,8 +1,2 @@
-# Webpack Starter
-
-Este es el proyecto inicial para crear aplicaciones utilizando webpack
-
-### Notas:
-```
-npm install 
-```
+# TODO
+Es una aplicación TODO hecha con vanilla JavaScript, usando el localStorage
