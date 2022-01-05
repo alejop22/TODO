@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlugin = require('copy-webpack-plugin')
+//const CopyPlugin = require('copy-webpack-plugin')
 
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -32,10 +32,10 @@ module.exports = {
                 test: /styles.css$/,
                 use: [ MiniCssExtractPlugin.loader, 'css-loader' ]
             },
-            {
+            /*{
                 test: /\.(png|jpe?g|gif)$/,
                 use: 'file-loader'
-            },
+            }, */
             {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
@@ -68,10 +68,10 @@ module.exports = {
             filename: '[name].[fullhash].css', //Me crea el archivo en dist con el mismo nombre del origin y ademas lo crea con un hash para que el navegador no lo guarde en cache
             ignoreOrder: false
         }),
-        new CopyPlugin({
+        /*new CopyPlugin({
             patterns: [
                 {from: 'src/assets/', to: 'assets/'}
             ]
-        })
+        }) */
     ]
 }
